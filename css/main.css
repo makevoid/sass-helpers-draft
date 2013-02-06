@@ -65,6 +65,14 @@ body {
     display: block;
     font-size: 0.7em; }
 
+.container .home img {
+  width: 30%;
+  float: left;
+  margin: 0 1% 1% 0; }
+.container .home img:first-child {
+  float: right;
+  margin: 1% 0 1% 1%; }
+
 .upcase {
   text-transform: uppercase; }
 
@@ -75,4 +83,4 @@ nav {
     color: white;
     margin: 0 1% 0 0; }
   nav a:hover {
-    color: black; }
+    color: #777777; }
