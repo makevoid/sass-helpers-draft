@@ -1,0 +1,73 @@
+// functions
+
+=centered
+  margin: 0 auto
+
+=upcase
+  text-transform: uppercase
+
+=uppercase
+  text-transform: uppercase
+
+
+// reset
+
+@mixin reset
+  *
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+
+  html, body
+    margin: 0
+    padding: 0
+
+  img
+    border: 0
+
+  a
+    text-decoration: none
+    outline: none
+
+// defaults
+
+nav a
+  font-weight: bold
+
+// css helpers
+
+.clear
+  clear: both
+
+.clear_left
+  clear: left
+
+.clear_right
+  clear: right
+
+.right
+  float: right
+
+
+// css3
+
+=rounded($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  -o-border-radius: $radius
+  border-radius: $radius
+
+=gradient($start, $end)
+  background: $start // FIXME: ideal, media($start, $end)
+  background: -webkit-linear-gradient(bottom, $end 0%, $start  65%, $start+#333 100%)
+  background: -moz-linear-gradient(bottom, $end 0%, $start  65%, $start+#333 100%)
+  background: linear-gradient(bottom, $end 0%, $start  65%, $start+#333 100%)
+
+=gradient_normal($start, $end)
+  background: $start // FIXME: ideal, media($start, $end)
+  background: -webkit-linear-gradient(bottom, $start 20%, $end 100%)
+  background: -moz-linear-gradient(bottom, $start 20%, $end 100%)
+  background: linear-gradient(bottom, $start 20%, $end 100%)
+
+=button_shadow($color)
+  box-shadow: inset 1px 1px 0px rgba(255,255,255,0.45), /* highlight */ inset 0 0 3px $color, /* inner glow */inset 0 40px 40px -10px  $color, /* gradient */ 1px 1px 2px rgba(0,0,0,0.4) /* shadow */

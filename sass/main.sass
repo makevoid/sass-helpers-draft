@@ -1,0 +1,50 @@
+@import ast
+
+@include reset
+
+// put your styles down here...
+
+
+@import ast_demo
+// remove this, it's just for the demo page
+
+
+// TODO: move in ast_demo
+
+$links: #F00
+$links_hover: #C00
+
+a
+  color: $links
+  -webkit-transition: color 0.4s ease-in-out
+a:hover
+  color: $links_hover
+
+body
+  font-family: Georgia, sans-serif
+
+
+.container
+  width: 85%
+  +centered
+  margin-top: 20px
+
+.container h1
+  font-size: 2em
+  span
+    display: block
+    font-size: 0.7em
+
+.upcase
+  +upcase
+
+// default nav
+
+nav
+  background: $links
+  padding: 5px 1% 2px
+  a
+    color: #FFF
+    margin: 0 1% 0 0
+  a:hover
+    color: #000
